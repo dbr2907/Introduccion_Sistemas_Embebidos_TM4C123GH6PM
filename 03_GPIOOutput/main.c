@@ -6,10 +6,11 @@
 #include "inc/tm4c123gh6pm.h"
 //******************************Librerias Extras************************************//
 #include "driverlib/sysctl.h"
+#include "driverlib/gpio.h"
 //*********************************Definiciones*************************************//
 
 //**********************************Variables***************************************//
-int F_Reloj=0;
+//int temp=0;
 //***********************************Metodos****************************************//
 
 
@@ -17,8 +18,20 @@ int F_Reloj=0;
 int main(void){
 
 	SysCtlClockSet(SYSCTL_XTAL_16MHZ|SYSCTL_SYSDIV_2_5);
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+	GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3);
+
 	while(1){
-	F_Reloj=SysCtlClockGet();
+	GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, 2);
+	SysCtlDelay(SysCtlClockGet()/3)
+	GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, 4);
+	SysCtlDelay(SysCtlClockGet()/3)
+	GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3, 8);
+	SysCtlDelay(SysCtlClockGet()/3)
 	}
 
 }
+
+
+
+

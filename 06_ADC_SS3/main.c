@@ -25,10 +25,8 @@ void Timer_Init(uint32_t Value) {
 
 
 void DataGet(void) {
-	GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_4, 16);
 	ADCIntClear(ADC0_BASE, 3);
 	ADCSequenceDataGet(ADC0_BASE, 3, &sample);
-	GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_4, 0);
 }
 
 
@@ -39,12 +37,10 @@ int main(void){
 	//Timer Setup
 	Timer_Init(1133);
 
-	//Pin para medidas
-
 	//ADC Pin Setup
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
 	GPIOPinTypeADC(GPIO_PORTB_BASE, GPIO_PIN_5);
-	GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_4);
+	//GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_4);
 
 	//ADC Periph Setup
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);
