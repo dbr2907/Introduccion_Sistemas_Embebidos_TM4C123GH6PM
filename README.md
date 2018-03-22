@@ -4,7 +4,7 @@ El propósito de estos códigos es brindar la base, de la manera mas sencilla po
 
 Author: David Josue Barrientos Rojas
 
-This work is licensed under a Creative Commons Attribution-NonCommmercial-ShareAlike 4.0 International
+This work is licensed under a Creative Commons Attribution 4.0 International
 
 This license lets others remix, tweak, and build upon this work non-commercially, as long as they credit the AUTHOR.
 
