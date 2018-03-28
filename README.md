@@ -37,20 +37,12 @@ Codigo para configurar los GPIO como entradas. GPIOPadConfigSet se debe usar sie
 El valor digital del pin puede ser verificado con un breakpoint para mostrar el valor de la variable "temp".
 El Pin PF0 viene bloqueado por defecto, por lo cual es necesario desbloquearlo para su uso
 
-02. GPIOOutput
+03. GPIOOutput
 
 Code to setup a GPIO as an Output. PF1,PF2 and PF3 are used as the have an RBG Led connected on the Develpoment Board.
 These code turns on each of the RBG Leds in order.
 
 Codigo para configurar los GPIO como salidas. Se utilizan los pines PF1,PF2 y PF3 dado que traen conectado un Led RBG en la tarjeta de desarrollo. Este codigo enciende cada led en orden.
-
-03. Timer
-
-Code to setup a Timer to count one second.
-Timer Value can be verified using a breakpoint the check the value of variable "temp".
-
-Codigo para configurar un Timer periodico para contar un segundo. 
-El valor del timer puede ser verificado con un breakpoint para mostrar el valor de la variable "temp".
 
 04. Timer
 
@@ -59,6 +51,7 @@ Timer Value can be verified using a breakpoint the check the value of variable "
 
 Codigo para configurar un Timer periodico para contar un segundo. 
 El valor del timer puede ser verificado con un breakpoint para mostrar el valor de la variable "temp".
+
 
 
 
